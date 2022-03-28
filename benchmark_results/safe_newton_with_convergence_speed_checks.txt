@@ -1,0 +1,14 @@
+-----------------------------------------------------------
+Benchmark                 Time             CPU   Iterations
+-----------------------------------------------------------
+BM_price               40.1 ns         40.1 ns     17472182
+BM_grad                16.1 ns         16.1 ns     43287957
+BM_calibrate/0/0        469 ns          469 ns      1492502 K=50 T=4m sigma=1.47
+BM_calibrate/1/0       3674 ns         3674 ns       189937 K=50 T=1 sigma=0.58
+BM_calibrate/2/0       3813 ns         3813 ns       183288 K=50 T=10 sigma=0.41
+BM_calibrate/0/1       3027 ns         3027 ns       230876 K=100 T=4m sigma=0.18
+BM_calibrate/1/1       2842 ns         2842 ns       245807 K=100 T=1 sigma=0.23
+BM_calibrate/2/1       3047 ns         3046 ns       228197 K=100 T=10 sigma=0.31
+BM_calibrate/0/2       4939 ns         4939 ns       141550 K=150 T=4m sigma=1.47
+BM_calibrate/1/2       3725 ns         3725 ns       188095 K=150 T=1 sigma=0.57
+BM_calibrate/2/2       3920 ns         3920 ns       178763 K=150 T=10 sigma=0.41
