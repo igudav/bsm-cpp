@@ -148,7 +148,7 @@ bsm::ModelParams bsm::calibrate(bsm::MarketData md,
 
         double new_vola;
         bool newton_ok = false;
-        if (fabs(grad.volatility()) > std::numeric_limits<double>::epsilon()) {
+        if (fabs(grad.volatility()) > std::numeric_limits<double>::epsilon()) {  // not dividing by zero
 
             new_vola = model.volatility() - (p - md.call_price()) / grad.volatility();  // Newton step
 
@@ -172,8 +172,6 @@ bsm::ModelParams bsm::calibrate(bsm::MarketData md,
         } else {
             lb = new_vola;
         }
-
-        grad = bsm::model_grad(option, ms, model);
     }
 
     if (iters == params.max_iter) {

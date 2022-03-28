@@ -1,14 +1,14 @@
 -----------------------------------------------------------
 Benchmark                 Time             CPU   Iterations
 -----------------------------------------------------------
-BM_price               40.0 ns         40.0 ns     17475281
-BM_grad                17.2 ns         17.2 ns     40889211
-BM_calibrate/0/0       1524 ns         1524 ns       459992 K=50 T=4m sigma=1.47
-BM_calibrate/1/0        341 ns          341 ns      2055649 K=50 T=1 sigma=0.58
-BM_calibrate/2/0        270 ns          270 ns      2595036 K=50 T=10 sigma=0.41
-BM_calibrate/0/1        105 ns          105 ns      6700653 K=100 T=4m sigma=0.18
-BM_calibrate/1/1        159 ns          159 ns      4394296 K=100 T=1 sigma=0.23
-BM_calibrate/2/1        220 ns          220 ns      3180795 K=100 T=10 sigma=0.31
-BM_calibrate/0/2       1316 ns         1316 ns       531473 K=150 T=4m sigma=1.47
-BM_calibrate/1/2        332 ns          332 ns      2110900 K=150 T=1 sigma=0.57
-BM_calibrate/2/2        190 ns          190 ns      3683500 K=150 T=10 sigma=0.41
+BM_price               29.6 ns         29.6 ns     23657169
+BM_grad                11.9 ns         11.9 ns     58692165
+BM_calibrate/0/0       1056 ns         1056 ns       658578 K=50 T=4m sigma=1.47
+BM_calibrate/1/0        261 ns          261 ns      2672350 K=50 T=1 sigma=0.58
+BM_calibrate/2/0        214 ns          214 ns      3271629 K=50 T=10 sigma=0.41
+BM_calibrate/0/1        101 ns          101 ns      6948978 K=100 T=4m sigma=0.18
+BM_calibrate/1/1        139 ns          139 ns      5030509 K=100 T=1 sigma=0.23
+BM_calibrate/2/1        180 ns          180 ns      3898268 K=100 T=10 sigma=0.31
+BM_calibrate/0/2        954 ns          954 ns       735715 K=150 T=4m sigma=1.47
+BM_calibrate/1/2        250 ns          250 ns      2798012 K=150 T=1 sigma=0.57
+BM_calibrate/2/2        156 ns          156 ns      4486116 K=150 T=10 sigma=0.41

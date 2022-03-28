@@ -20,7 +20,7 @@ int main() {
     bsm::AccuracyParams params = {
         1e-7,  // atol
         1e-7,  // rtol
-        2,  // max_iter
+        20,  // max_iter
     };
 
     try{
