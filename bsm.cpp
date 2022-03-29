@@ -13,7 +13,6 @@ namespace {
         return 0.5 + 0.5 * erf(x / SQRT_2);
     }
 
-
     void check_params_for_calibration(bsm::MarketData md,
                                       bsm::CallStockOption option,
                                       bsm::MarketState ms) {

@@ -1,7 +1,5 @@
 #include "../bsm.h"
 
-#include "gtest/gtest-param-test.h"
-#include "gtest/internal/gtest-port.h"
 #include <gtest/gtest.h>
 #include <limits>
 #include <stdexcept>
@@ -71,7 +69,9 @@ INSTANTIATE_TEST_SUITE_P(
         EvalTestParams({ 70.0, 0.004 }, { 100.0, 0.0 }, { 0.2 }, 30.0, 0.0),
         EvalTestParams({ 100.0, 1.0 }, { 100.0, 0.0 }, { 0.2 }, 7.96556746, 39.6952547477012),
         EvalTestParams({ 100.0, 10.0 }, { 100.0, 0.0 }, { 0.2 }, 24.81703660, 120.003894843014),
-        EvalTestParams({ 100.0, 1.0 }, { 100.0, -0.2 }, { 0.2 }, 1.83572243, 26.6085249898755)
+        EvalTestParams({ 100.0, 1.0 }, { 100.0, -0.2 }, { 0.2 }, 1.83572243, 26.6085249898755),
+        EvalTestParams({ 50.0, 0.0 }, { 100.0, 0.1 }, { 0.2 }, 50.0, 0.0),
+        EvalTestParams({ 150.0, 0.0 }, { 100.0, 0.1 }, { 0.2 }, 0.0, 0.0)
     )
 );
 
