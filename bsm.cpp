@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <cmath>
 #include <limits>
 #include <iostream>
@@ -89,7 +88,7 @@ double bsm::price(bsm::CallStockOption option,
                   bsm::ModelParams model) {
 
     if (option.time_to_expiration() < std::numeric_limits<double>::epsilon()) {
-        return std::max(0.0, ms.stock_price() - option.strike_price());
+        return fdim(ms.stock_price(), option.strike_price());
     }
 
     double sigma_sq_t = model.volatility() * sqrt(option.time_to_expiration());
@@ -125,8 +124,8 @@ bsm::ModelParams bsm::calibrate(bsm::MarketData md,
     check_params_for_calibration(md, option, ms);
 
     double init_vol = md.call_price() / ms.stock_price() * SQRT_2_PI / sqrt(option.time_to_expiration());
-    init_vol = std::max(init_vol, VOL_MIN);
-    init_vol = std::min(init_vol, VOL_MAX);
+    init_vol = fmax(init_vol, VOL_MIN);
+    init_vol = fmin(init_vol, VOL_MAX);
     bsm::ModelParams model{init_vol};
 
     double p = bsm::price(option, ms, model);
